@@ -8,7 +8,7 @@ let accountState;            // undefined
 // accountId = 2; // not allowed
 accountEmail = "thakur2003@mail.com"
 accountPassword = " 1234"
-accountCity = "delhi"
+accountCity = "delh"
 
 console.log(accountId);
 
