@@ -23,6 +23,7 @@ console.log(null >= 0);   //comparsions convert null to 0
  // undefined always give false value
 
  // === strict check ****************
+// checks every thing datatypes also
  
  console.log("2" === 2);
 
