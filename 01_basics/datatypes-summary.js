@@ -40,3 +40,6 @@
 
  console.log(typeof myfuntion);                    // method used to find the datatype of the funtion 
  
+
+ // doc to read 
+ // // https://262.ecma-international.org/5.1/#sec-11.4.3
