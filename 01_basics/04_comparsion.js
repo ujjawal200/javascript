@@ -27,6 +27,8 @@ console.log(null >= 0);   //comparsions convert null to 0
  
  console.log("2" === 2);
 
+ 
+
 
 
 
