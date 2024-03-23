@@ -43,3 +43,32 @@
 
  // doc to read 
  // // https://262.ecma-international.org/5.1/#sec-11.4.3
+
+
+
+
+
+
+
+
+ //***************************************************************************************************************************** */
+ // stack (primitive)we get a copy , heap(non - primitive) we get a refernce of the original value 
+
+
+ //stack -> no change in the original 
+ let me = "UjjawalThakur"
+ let anotherName = me;
+ anotherName = "shiv";
+ console.log(me);
+ console.log(anotherName);
+
+// heap -> changes in the original 
+ let userOne = {                              // object value can only be accessed by"."
+   email: "user@google.com",
+   upi : "user@ybl",
+ }
+ let userTwo = userOne;
+
+ userTwo.email = " ujjwal@google.com";
+ console.log(userOne);
+ console.log(userTwo);
