@@ -3,12 +3,12 @@
 const appleUser = new Object()            //singleton object
 const AppleUser = {}                      //non - singleton object
 
-console.log(appleUser);
+// console.log(appleUser);
 appleUser.id = "123abc"
 appleUser.name = "mithu"
 appleUser.isLoggedIn = false
 
-console.log(appleUser);
+//console.log(appleUser);
 
 //object in object
 
@@ -23,7 +23,7 @@ const regularUser  = {
 
 }
 
-console.log(regularUser.fulname.userfullname.firstname);    //object into object can be accesed like this
+//console.log(regularUser.fulname.userfullname.firstname);    //object into object can be accesed like this
 
 
 //combining 2 objects
@@ -35,20 +35,44 @@ const obj2 = {3: "a", 4: "b"}
 //const obj3 = Object.assign({},obj1,obj2)
 const obj3 = {...obj1 , ...obj2}           // 90% of time tihis method is used spreading
 
-console.log(obj3);
+// console.log(obj3);
 
 
-//when values arived from db
+// //when values arived from db
 
-console.log(appleUser);
+// console.log(appleUser);
 
-console.log(Object.keys(appleUser));          // result is in the form of array
-console.log(Object.values(appleUser));        // result is in the form of array
-console.log(Object.entries(appleUser));       // result is inn array in array format 
+// console.log(Object.keys(appleUser));          // result is in the form of array
+// console.log(Object.values(appleUser));        // result is in the form of array
+// console.log(Object.entries(appleUser));       // result is inn array in array format 
 
 
-console.log(appleUser.hasOwnProperty('isLoggedIn'));       // to check if the desired value is present or not
- 
+// console.log(appleUser.hasOwnProperty('isLoggedIn'));       // to check if the desired value is present or not
+
+
+//objects destructuring
+
+const course ={
+    coursename : "js in hindi",
+    price : "999",
+    courseInstructor : "ujjawal"
+}
+
+//course.courseInstructor
+
+const{courseInstructor: Instructor} = course;   //destructuring 
+
+console.log(Instructor);  
+
+// Json Api
+
+
+// {
+//     "name" : " ujjawl",
+//     "age" : 21,
+//     "courseName": "js in hindi"
+// }
+
 
 
 
