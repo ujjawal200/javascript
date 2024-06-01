@@ -1,13 +1,22 @@
 # javascript
-code repo for js 
+JavaScript Practice
 
-# command prompt
-node file_name/folder_name
+# How to Run Js Code in Terminal
+```node file_name/folder_name```
 
 
-# git push command 
+# Git(VCS) Command
+### How to push code on github
 
-git add .
-git commit -m "message" = single line commit
-git commit   = multiline commit  
+```git add .```
+
+```git commit -m "message"``` For  Single line commit
+
+```git commit``` For multiline commit
+
+```git push``` 
+
+```git log``` The git log command displays committed snapshots
+
+```git status``` It allows us to see the tracked, untracked files and changes 
 
