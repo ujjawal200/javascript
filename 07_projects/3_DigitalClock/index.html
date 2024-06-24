@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+       a {
+    background-color: lavender;
+    list-style: none;
+    color: black;
+    padding: 4px;
+    border-radius: 6px;
+
+}
+.center{
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Aligns children vertically in the center */
+    align-items: center; /* Aligns children horizontally in the center */
+    height: 100vh; /* Makes the container take the full height of the viewport */
+    background-color: black;
+    padding: 5px;
+    height: 100vh;
+
+    /* vh  ==> Viewport Height 
+      vw ==> Viewport Width
+    */
+
+}
+.navbar {
+    background-color: white;
+    height: "50px";
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+
+}
+#banner {
+    width: 100%; /* Ensures the banner takes full width */
+    text-align: center; /* Centers text inside the banner if any */
+    color : white;
+}
+
+#clock {
+    width: 100px;
+    border-radius: 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: orange;
+    padding: 15px;
+    margin: 0 auto; /* Centers the clock horizontally in the page */
+    margin-top: 10px; /* Provides space between the banner and clock */
+    color: white;
+}
+
+
+    </style>
+   
+
+    <title>digital clock</title>
+  </head>
+  <body>
+    <nav class = "navbar">
+      <a href="" aria-current="page">Home </a>
+      <a target="_blank" href="https://www.google.co.in/">Google</a>
+    </nav>
+
+    <div class="center">
+      
+      <div id ="banner"><span>Your local Time</span></div>
+      <div id ="clock"></div>
+    </div>
+    <script src="chaiaurcode.js"></script>
+  </body>
+</html>
