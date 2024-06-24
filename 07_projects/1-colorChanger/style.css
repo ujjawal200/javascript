@@ -1,0 +1,53 @@
+#grey {
+
+    padding: 20px;
+    background-color: grey;
+    border: 1px solid black;
+
+
+}
+
+#lavender {
+
+    padding: 20px;
+    background-color: lavender;
+    border: 1px solid black; 
+
+}
+
+#blue {
+
+    padding: 20px;
+    background-color: blue;
+    border: 1px solid black;
+}
+
+#yellow {
+
+    padding: 20px;
+    background-color: yellow;
+    border: 1px solid black;
+
+}
+
+#orange {
+    padding: 20px;
+    background-color: orange;
+    border: 1px solid black;
+}
+
+#purple {
+    padding: 20px;
+    /* margin: ; */
+   
+    background-color: purple;
+    border: 1px solid black;
+}
+
+
+
+
+.btndiv {
+    display: flex;
+    gap: 5px;
+}

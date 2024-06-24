@@ -10,5 +10,8 @@
 ## project 1 
 
 ```javascirpt
-console.log("hitesh)
+console.log("ujjawal") 
 ```
+
+dot for class
+hash for id 
