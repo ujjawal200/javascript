@@ -1,17 +1,14 @@
 # Projects related to DOM 
 
 
-## project link
-[click here](https://stackblitz.com/edit/dom-project-chaiaurcode?file=index.html)
+project 1 
+colorChanger
 
-# Solution code
+project 2
+BMI calculator
 
+project 3
+Digital Clock
 
-## project 1 
-
-```javascirpt
-console.log("ujjawal") 
-```
-
-dot for class
-hash for id 
+project 4
+Guess the number
