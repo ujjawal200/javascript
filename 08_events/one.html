@@ -1,0 +1,77 @@
+<!-- read about 
+ event propogation
+ event bubbling 
+ event capturing
+ event spill -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>html Events</title>
+</head>
+<body>
+    <h2>Amazing image</h2>
+    <div>
+        <ul id ="images">
+            <li><img width="200px" id="japan" src="https://images.pexels.com/photos/3532553/pexels-photo-3532553.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt=""></li>
+            <li><img width="200px" id="river" src="https://images.pexels.com/photos/3532551/pexels-photo-3532551.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt=""></li>
+            <li><img width="200px" id="owl" src="https://images.pexels.com/photos/3532552/pexels-photo-3532552.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt="" ></li>
+            <li><img width="200px" id="prayer" src="https://images.pexels.com/photos/2522671/pexels-photo-2522671.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt=""></li>
+            <li><a style="color: blue;" href="https://www.google.com/" id="google">Google</a></li>
+        </ul>
+    </div>
+    
+</body>
+<script>
+    // document.getElementsById('owl').onclick = function(){
+     //   alert("owl clicked")
+    // } 
+
+
+    //attachEvent()    when internet explorer was very busy
+    // jquery - .on 
+
+    // type, timestamp , defaultPrevented
+    // target , toElement , srcElement  , currentTarget,
+    // clientX, clientY , screenX, screenY
+    // altKey, ctrelKey , shiftKey , keyCode
+
+
+    // document.getElementById('owl').addEventListener('click',function(e){
+    //    console.log(e);
+    // },false)
+    // // fasle does the event bubbling not the event capturing
+    // // when u will use true we can capture the event as they are initciated
+
+    // document.getElementById('images').addEventListener('click',function (e){
+    //     console.log("clicked inside the ul");
+
+    // },false)
+
+    // document.getElementById('owl').addEventListener('click',function (e){
+    //     console.log("clicked inside the owl");
+    //     e.stopPropagation()
+
+    // },false)
+
+    // document.getElementById('google').addEventListener('click',function(e){
+    //     e.preventDefault();
+    //     console.log("google clicked");
+        
+    // },false)
+
+// removing image on click 
+document.querySelector('#images').addEventListener('click',function(e){
+    console.log(e.target.parentNode);
+    if(e.target.tagName === 'IMG'){
+        console.log(e.target.id);
+    }
+    let removeIt = e.target.parentNode
+     removeIt.remove()            // new method
+    // removeIt.parentNode.removeChild(removeIt);    // old method
+    
+},false)
+</script>
+</html>
