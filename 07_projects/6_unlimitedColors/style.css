@@ -1,0 +1,26 @@
+.navbar{
+    display:flex;
+    justify-content: center;     /* horizontal */     
+   gap: 4px;
+    align-items: center;            /*  vertically */
+    background-color: white;
+height: 50px;
+}
+/* *{
+       margin: 0px;
+} */
+a{
+    padding:20px;
+    border-color: black;
+    background-color: lavender;
+    border-radius:12px ;
+    
+}
+
+body{
+    background-color: black;
+    color: white;
+    height :100vh;
+    
+    
+}

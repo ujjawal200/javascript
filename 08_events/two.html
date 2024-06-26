@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SetTimeOut</title>
+</head>
+<body>
+    <h1>async in javascript</h1>
+    <button id="stop">Stop</button>
+    
+</body>
+<script>
+    // do only one time 
+    //setInterval() keeps on working after the schedule time
+    setTimeout(function(){
+        console.log("ujjawal");
+    },2000)
+
+    // anaother way of calling setTimeOut function we can give the refernence also in place of function for ex
+
+    // document.querySelector('h1').innerHTML = "async concepts"
+    const changeText = function(){
+        document.querySelector('h1').innerHTML = "async concepts"
+    }
+    setTimeout(changeText,2000)
+
+    const sayUjjawal = function(){
+        console.log("ujjawal2");
+    }
+    const changeMe = setTimeout(sayUjjawal,2000)
+
+    // now we are going to make clearTimeOut function to stop setTimeOut function
+
+    //clearTimeout(changeMe)
+
+    document.querySelector('#stop').addEventListener('click',function(){
+        clearTimeout(changeMe);
+        console.log("Stopped")
+    })
+
+
+</script>
+</html>
