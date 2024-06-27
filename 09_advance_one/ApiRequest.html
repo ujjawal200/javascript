@@ -1,0 +1,108 @@
+<!--  before fetch() for getting api xmlHttprequest was used to fetch -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+     body {
+            background-color: #212121;
+            color: #ffffff;
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding-top: 20px;
+        }
+     #userCard {
+            display: none;
+            background-color: #333333;
+            padding: 20px;
+            border-radius: 8px;
+            margin-top: 20px;
+        }
+        img {
+            width: 100px;
+            border-radius: 50%;
+        }
+        input, button {
+            margin: 10px;
+            padding: 10px;
+            border-radius: 5px;
+            border: none;
+        }
+        input {
+            width: 200px;}
+</style>
+
+<body style="background-color: #212121;">
+
+    <!-- The XMLHttpRequest.readyState property returns the state an XMLHttpRequest client is in. An XHR client exists in one of the following states:
+
+Value	State	Description
+0	UNSENT	Client has been created. open() not called yet.
+1	OPENED	open() has been called.
+2	HEADERS_RECEIVED	send() has been called, and headers and status are available.
+3	LOADING	Downloading; responseText holds partial data.
+4	DONE	The operation is complete. -->
+<input id="githubUsername" type="text" placeholder="Enter GitHub username">
+<button id="fetchButton">Fetch GitHub User</button>
+    <div id="userCard">
+        <img id="userImage" src="" alt="User Image">
+        <p id="userName"></p>
+        <p>Bio: <span id = "bio"></span></p>
+
+        <p>Followers: <span id="userFollowers"></span></p>
+        <p>Following: <span id="userFollowing"></span></p>
+
+        <p>Blog: <span id = "blog"></span></p>
+    </div>
+
+</body>
+<script>
+    const button = document.getElementById('fetchButton');
+    button.onclick = function() {
+
+        const username = document.getElementById('githubUsername').value;
+        const requestUrl = `https://api.github.com/users/${username}`;
+      
+
+
+
+
+        // const requestUrl = 'https://api.github.com/users/ujjawal200';
+        const xhr = new XMLHttpRequest();
+        xhr.open('GET', requestUrl);
+        xhr.onreadystatechange = function() {
+            if(xhr.readyState === XMLHttpRequest.DONE) {
+                if (xhr.status === 200) {
+                    const data = JSON.parse(xhr.responseText);
+                    document.getElementById('userImage').src = data.avatar_url;
+                    document.getElementById('userName').textContent = data.name || data.login;
+                    document.getElementById('userFollowers').textContent = data.followers;
+                    document.getElementById('userFollowing').textContent = data.following;
+                    document.getElementById('bio').textContent = data.bio;
+
+                    
+                    document.getElementById('blog').textContent = data.blog;
+
+
+
+                    document.getElementById('userCard').style.display = 'block';
+
+                    console.log(data)
+                } else {
+                    console.error('Failed to fetch data:', xhr.statusText);
+                }
+            }
+        };
+        xhr.send();
+    }
+
+</script>
+
+</html>
